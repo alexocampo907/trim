@@ -1,0 +1,22 @@
+Package: trim
+Type: Package
+Title: Implements trimmed means approach for missing data 
+Version: 0.1.0
+Author: Alex Ocampo
+Maintainer: Alex Ocampo <alexocampo907@gmail.com>
+Description: This package allows the estimation of treatment effects for randomized 
+    clinical trial data using the trimmed means approach for missing data first 
+    introduced by Permutt & Li (2017) <http://doi.org/10.1002/pst.1768>. The 
+    methodology handles the missing data problem by ranking unobserved outcomes at 
+    the poor end of the distribution and then trimming equal fractions from each 
+    treatment arm before calculating treatment effects. The fraction trimmed can be 
+    pre-specified by the user, but must exceed the maximum fraction of missing data 
+    between the two arms. This trimmed means approach estimates the treatment 
+    difference amount the best X% of patients from each arm that remain after 
+    trimming.
+Depends: R (>= 3.1.0)
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: mice
+RoxygenNote: 6.1.1
